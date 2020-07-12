@@ -1,0 +1,511 @@
+/*------------------------------------*\
+  #MODULES
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+.ts-body, .body, .body p, .body dl, .body ol li, .body ol li:before, .body ul li, .body ul li:before, .ts-small, .ts-label, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+.body em,
+.body i, .body blockquote > p, .body blockquote > blockquote p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-style: italic; }
+
+.ts-title, .body h1,
+.body h2, .ts-subtitle, .body h3, .ts-subsubtitle, .body h4,
+.body h5,
+.body h6, .body b,
+.body strong, .body dl dt, .body table th {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 700; }
+
+.body em > b,
+.body b > em,
+.body i > b,
+.body b > i,
+.body em > strong,
+.body strong > em,
+.body i > strong,
+.body strong > i {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-style: italic;
+  font-weight: 700; }
+
+/*------------------------------------*\
+    #TYPESIZE/SCALE
+\*------------------------------------*/
+.ts-small, .ts-label, .body small, .body code,
+.body samp,
+.body pre, figcaption {
+  font-size: 0.778rem;
+  line-height: 1.4; }
+
+.ts-subsubtitle, .body h4,
+.body h5,
+.body h6, .ts-body, .body, .body p, .body dl, .body ol li, .body ol li:before, .body ul li, .body ul li:before {
+  font-size: 1rem;
+  line-height: 1.4; }
+
+.ts-subtitle, .body h3 {
+  font-size: 1.222rem;
+  line-height: 1.4; }
+
+.ts-title, .body h1,
+.body h2 {
+  font-size: 1.556rem;
+  line-height: 1.2; }
+
+/*------------------------------------*\
+  #SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  #BORDERS WIDTH
+\*------------------------------------*/
+/*------------------------------------*\
+  reset
+\*------------------------------------*/
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+button, input {
+  line-height: normal; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  *overflow: visible; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/*------------------------------------*\
+  mixins
+\*------------------------------------*/
+/*------------------------------------*\
+  text-styles
+\*------------------------------------*/
+.ts-label {
+  text-transform: uppercase;
+  letter-spacing: .1em; }
+
+.ts-link {
+  color: #000000;
+  text-decoration: none; }
+  .ts-link:hover {
+    color: #0000FF;
+    text-decoration: none; }
+
+.ts-body-link, .body a {
+  color: #000000;
+  text-decoration: underline; }
+  .ts-body-link:hover, .body a:hover {
+    color: #0000FF;
+    text-decoration: underline; }
+
+/*------------------------------------*\
+    title
+  \*------------------------------------*/
+.body h2, .body h3, .body h4, .body h5 {
+  margin: 1.75rem 0 1rem; }
+
+/*------------------------------------*\
+    paragraph
+  \*------------------------------------*/
+.body p {
+  margin-bottom: .8em; }
+
+/*------------------------------------*\
+    link
+  \*------------------------------------*/
+/*------------------------------------*\
+    bold italic
+  \*------------------------------------*/
+/*------------------------------------*\
+    blockquote
+  \*------------------------------------*/
+.body blockquote {
+  padding-left: 1em;
+  border-left: 1px solid #000000;
+  margin-top: 1em; }
+
+/*------------------------------------*\
+    definitions
+  \*------------------------------------*/
+.body dl dt {
+  padding-bottom: .3em; }
+  .body dl dt:first-of-type {
+    padding-top: .6em;
+    border-top: 1px solid #000000; }
+
+.body dl dd {
+  padding-bottom: .6em;
+  margin-bottom: .6em;
+  border-bottom: 1px #000000 solid; }
+
+/*------------------------------------*\
+    list
+  \*------------------------------------*/
+.body ol {
+  counter-reset: li; }
+  .body ol li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: .5em; }
+    .body ol li:before {
+      content: counter(li);
+      counter-increment: li;
+      position: absolute;
+      left: 0; }
+  .body ol ol > li:first-of-type {
+    margin-top: .5em; }
+
+.body ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: .5em; }
+  .body ul li:before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    font-size: 1em; }
+
+.body ul ol > li:first-of-type {
+  margin-top: .5em; }
+
+/*------------------------------------*\
+    table
+  \*------------------------------------*/
+.body table {
+  width: 100%;
+  margin-top: 1.111rem;
+  margin-bottom: 1.111rem; }
+  .body table thead {
+    border-bottom: 1px solid #000000; }
+  .body table th {
+    text-align: left; }
+  .body table tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .body table tfoot {
+    border-top: 3px solid #000000; }
+  .body table th,
+  .body table td {
+    padding: .5em 0; }
+  @media (max-width: 767px) {
+    .body table th,
+    .body table td {
+      display: block; } }
+
+/*------------------------------------*\
+    spacing
+  \*------------------------------------*/
+.body ul,
+.body ol,
+.body .embed-container {
+  margin-bottom: 1em; }
+
+/*------------------------------------*\
+    misc
+  \*------------------------------------*/
+.body ol,
+.body ul {
+  list-style: none; }
+
+.body sub,
+.body sup {
+  font-size: .75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+.body sup {
+  top: -0.5em; }
+
+.body sub {
+  bottom: -0.25em; }
+
+.body abbr {
+  border-bottom: 1px dotted #000000;
+  cursor: help; }
+
+.body q:before,
+.body cite:before {
+  content: '"'; }
+
+.body q:after,
+.body cite:after {
+  content: '"'; }
+
+.body mark {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #000000; }
+
+.body code,
+.body samp,
+.body pre {
+  font-family: monospace; }
+
+.body hr {
+  background: #000000;
+  height: 1px;
+  border: none;
+  margin-top: 2.222rem;
+  margin-bottom: 1.667rem; }
+
+/*------------------------------------*\
+  medias
+\*------------------------------------*/
+img, video, object {
+  max-width: 100%;
+  height: auto; }
+
+img {
+  display: block; }
+
+img.image-lazy {
+  width: 100%; }
+  img.image-lazy:not(.lazyloaded) {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; }
+  img.image-lazy.lazyloaded {
+    opacity: 1;
+    transition: opacity 1s ease-in-out; }
+
+figcaption {
+  margin-top: 0.556rem; }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/*------------------------------------*\
+  misc
+\*------------------------------------*/
+.hidden {
+  display: none !important; }
+
+@media (max-width: 767px) {
+  .hidden-small {
+    display: none !important; } }
+
+@media (min-width: 768px) {
+  .hidden-large {
+    display: none !important; } }
+
+.nav__list {
+  list-style: none; }
+
+.clear::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+/*------------------------------------*\
+  global
+\*------------------------------------*/
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .wrapper .footer {
+    margin-top: auto; }
+
+.index,
+.detail {
+  padding-top: 2.222rem;
+  padding-bottom: 2.222rem;
+  border-bottom: 1px solid #000000; }
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  display: block; }
+
+/*------------------------------------*\
+  #BASE-STYLES
+\*------------------------------------*/
+html {
+  font-size: 18px; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 16px; } }
+
+body {
+  overflow: hidden;
+  background: #FFFFFF;
+  color: #000000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+  body ::-moz-selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000000; }
+  body ::selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000000; }
+
+/*------------------------------------*\
+  print style
+\*------------------------------------*/
+@media print {
+  html {
+    font-size: 14px; }
+  @page {
+    margin: 2cm 2.5cm; }
+  body {
+    font-family: Georgia, Times, Times New Roman, serif;
+    font-size: 16pt;
+    line-height: 22pt;
+    color: #000000; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol {
+    font-family: Georgia, Times, Times New Roman, serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400; }
+  h1 {
+    font-size: 32pt;
+    line-height: 40pt; }
+  h2 {
+    font-size: 24pt;
+    line-height: 30pt; }
+  h3 {
+    font-size: 20pt;
+    line-height: 26pt; }
+  h4 {
+    font-size: 14pt;
+    line-height: 20pt; }
+  p,
+  ul,
+  ol,
+  blockquote {
+    font-size: 11pt;
+    line-height: 16pt; }
+  blockquote {
+    text-align: center; }
+  small {
+    font-size: 9pt;
+    line-height: 14pt; }
+  p {
+    page-break-inside: avoid; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid; }
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: .3cm 0; }
+  .article {
+    width: 100%;
+    height: auto !important;
+    margin: 0;
+    display: block;
+    padding: 0;
+    overflow: visible;
+    box-shadow: none; }
+  .header,
+  .footer,
+  .section.print {
+    display: none !important; }
+  body {
+    background: #fff !important;
+    color: #000; }
+  .body p {
+    widows: 3;
+    orphans: 3; }
+  .body a {
+    page-break-inside: avoid; }
+  .body blockquote {
+    page-break-inside: avoid; }
+  .body h1, .body h2, .body h3, .body h4, .body h5, .body h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid; }
+  .body img {
+    page-break-inside: avoid;
+    page-break-after: avoid; }
+  .body table, .body pre {
+    page-break-inside: avoid; }
+  .body ul, .body ol, .body dl {
+    page-break-before: avoid; }
+  .body a:link, .body a:visited, .body a {
+    background: transparent;
+    color: #2C51DF;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: left; }
+  .body a[href^=http]:after {
+    content: " <" attr(href) "> "; }
+  .body article a[href^="#"]:after {
+    content: ""; }
+  .body a:not(:local-link):after {
+    content: " <" attr(href) "> "; } }
