@@ -390,6 +390,10 @@ figcaption {
   width: 100%;
   height: 100%; }
 
+#main {
+  background: red;
+  width: 100vw; }
+
 /*------------------------------------*\
   #BASE-STYLES
 \*------------------------------------*/
